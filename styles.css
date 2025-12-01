@@ -1,0 +1,381 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #111;
+    color: #eee;
+}
+@font-face {
+    font-family: Aquire;
+    src: url(fonts/Aquire-BW0ox.otf);
+}
+@font-face {
+    font-family: Aquire;
+    src: url(fonts/AquireLight-YzE0o.otf);
+    font-weight: light;
+}
+@font-face {
+    font-family: Aquire;
+    src: url(fonts/AquireBold-8Ma60.otf);
+    font-weight: bold;
+}
+nav {
+    /* Styles for navigation bar */
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #333;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: block;
+    padding: 1rem;
+    color: #ccc;
+    text-decoration: none;
+    font-family: Aquire;
+    letter-spacing: 0.5px;
+}
+nav li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.hero-image {
+    /* Styles for hero image container */
+    width: 100%;
+    height: 600px;
+    margin: 20px 0;
+    padding: 20px 120px;
+}
+#orbit .hero-image {
+    /* Styles for orbit background image */
+    background-image: url('images/orbit_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#orbit.hero-image .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#helyra-overview {
+    /* Styles helyra the star's hero image */
+    background-image: url('images/helyra_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#pyronis-overview.hero-image {
+    /* Styles for pyronis hero image */
+    background-image: url('images/pyronis_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#asteron-overview.hero-image {
+    /* Styles for asteron hero image */
+    background-image: url('images/Asteron_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#gaia-overview.hero-image {
+    /* Styles for gaia hero image */
+    background-image: url('images/gaia_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#thalassa-overview.hero-image {
+    /* Styles for thalassa hero image */
+    background-image: url('images/thalassa_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#aurora-overview.hero-image {
+    /* Styles for aurora hero image */
+    background-image: url('images/Aurora_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+#cyrion-overview.hero-image {
+    /* Styles for cyrion hero image */
+    background-image: url('images/cyrion_hero.png');
+    background-size: cover;
+    background-position: center;
+}
+.page-header {
+    /* Styles for page header */
+    width: 100%;
+    min-height: 180px;
+    border: #ccc 2px solid;
+    background-color: #222;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-family: Aquire;
+    font-size: 4.5rem;
+}
+
+.page-header h2 {
+    margin: 0;
+    font-family: Aquire;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #aaa;
+}
+
+.section-header {
+    /* Styles for section header */
+    width: 100%;
+    height: 100px;
+    border-bottom: #ccc 2px solid;
+    background-color: #222;
+    padding: 20px clamp(20px, 8vw, 120px);
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.section-header h1 {
+    font-family: Aquire;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+.section-header + .container {
+    margin-top: 20px;
+}
+
+.container{
+    /* Styles for main container */
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    padding: 20px clamp(20px, 8vw, 120px);
+}
+.container-info-long {
+    /* Styles for long info container */
+    width: 100%;
+    border: #ccc 2px solid;
+    border-radius: 15px;
+    background-color: #222;
+    margin-top: 20px;
+    padding:  40px 40px 20px 40px;
+    box-sizing: border-box;
+}
+.container-info-long h2 {
+    font-family: Aquire;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-top: 0;
+}
+.container-title {
+    /* Styles for title container */
+    width: 480px;
+    height: 180px;
+    border-radius: 15px;
+    background-color: #222;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container-title h1 {
+    font-family: Aquire;
+    font-weight: light;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 3rem;
+}
+.container-title h2 {
+    font-family: Aquire;
+    font-size: 1.5rem;
+    margin: 0;
+}
+.hero-image .container-title{
+    background: rgba(20, 20, 20, 0.6);
+}
+.container-info-short{
+    /* Styles for info container */
+    width: 480px;
+    min-height: 360px;
+    border-radius: 15px;
+    background-color: #222;
+    margin: 20px 20px 0 0;
+    padding:  40px 20px;
+    box-sizing: border-box;
+}
+.container-info-short h1 {
+    font-family: Aquire;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-top: 0;
+}
+.container-info-short h2 {
+    font-family: Aquire;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.hero-image .container-info-short{
+    background: rgba(20, 20, 20, 0.6);
+    min-height: 300px;
+}
+#helyra-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255,120,60,0.15);
+}
+#helyra-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255,120,60,0.15);
+}
+#pyronis-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255,120,60,0.15);
+}
+#asteron-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255, 180, 60, 0.15);
+}
+#asteron-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(255,180,60,0.15);
+}
+#gaia-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(37, 178, 108, 0.15);
+}
+#gaia-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(55, 160, 108, 0.15);
+}
+#thalassa-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(60, 120, 255, 0.15);
+}
+#thalassa-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(131, 188, 214, 0.30);
+}  
+#aurora-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(180, 60, 255, 0.15);
+}
+#aurora-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(180, 60, 255, 0.15);
+}
+#cyrion-overview .container-title {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(120, 90, 240, 0.15);
+}
+#cyrion-overview .container-info-short {
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 12px rgba(120, 90, 240, 0.15);
+}
+
+.side-nav{
+    /* Styles for side navigation */
+    position: fixed;
+    left: 10px;
+    width: 80px;
+    height: 600px;
+    border: #ccc 2px solid;
+    background-color: #222;
+}
+.side-nav .icon {
+    /* Styles for icon inside side navigation */
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    /*background-image: url('images/surface_icon.svg');*/
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.side-nav .icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+   /* background-image: url('images/surface_icon_hover.svg');*/
+    box-shadow: 0 0 10px rgba(150,150,150,0.5);
+}
+.side-nav .icon.active {
+    /*background-image: url('images/surface_icon_hover.svg');*/
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+/* Side nav icon images */
+/* Default images */
+.icon.surface { background-image: url("images/surface_icon.svg"); }
+.icon.geology { background-image: url("images/geology_icon.svg"); }
+.icon.orbit { background-image: url("images/orbit_icon.svg"); }
+.icon.atmosphere { background-image: url("images/atmosphere_icon.svg"); }
+.icon.rings { background-image: url("images/rings_icon.svg"); }
+.icon.moons { background-image: url("images/moons_icon.svg"); }
+.icon.composition { background-image: url("images/composition.svg"); }
+.icon.flares { background-image: url("images/flares.svg"); }
+
+/* Hover images */
+.icon.surface:hover { background-image: url("images/surface_icon_hover.svg"); }
+.icon.geology:hover { background-image: url("images/geology_icon_hover.svg"); }
+.icon.orbit:hover { background-image: url("images/orbit_icon_hover.svg"); }
+.icon.atmosphere:hover { background-image: url("images/atmosphere_icon_hover.svg"); }
+.icon.rings:hover { background-image: url("images/rings_icon_hover.svg");}
+.icon.moons:hover { background-image: url("images/moons_icon_hover.svg");}
+.icon.composition:hover { background-image: url("images/composition_hover.svg"); }
+.icon.flares:hover { background-image: url("images/flares_hover.svg"); }
+
+/*planet specific icons */
+.icon.helyra { background-image: url("images/helyra_icon.png"); }
+.icon.pyronis { background-image: url("images/Pyronis_icon.png"); }
+.icon.asteron { background-image: url("images/asteron_icon.png"); }
+.icon.gaia { background-image: url("images/gaia_icon.png"); }
+.icon.thalassa { background-image: url("images/thalassa_icon.png"); }
+.icon.aurora { background-image: url("images/aurora_icon.png"); }
+.icon.cyrion { background-image: url("images/cyrion_icon.png"); }
+
+.side-nav .text-box {
+    /* Styles for text box inside side navigation */
+    display: none;
+    text-align: center;
+    color: #ccc;
+    font-family: Aquire;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+.side-nav .text-box:hover {
+    display: block;
+}
+.side-nav .text-box.active {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+.name-card {
+    /* Styles for name card */
+    width: 200px;
+    border: #ccc 2px solid;
+    border-radius: 15px;
+    background-color: #222;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
